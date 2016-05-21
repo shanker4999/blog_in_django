@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block address %}
+<div class ="image">
+    <img src="../../static/blog/images/shankar.jpg"><br/>
+</div>
+<section id="left">
+
+    {% for contact in contact_details %}
+    {{ contact.name }} <br/>
+    {{ contact.myaddress|safe|linebreaks }}
+</section>
+<section id="right">
+    Phone: +{{ contact.phone_num }}<br/>
+    Email: {{ contact.email }}<br/>
+    <a href ="{{ contact.github }}">GitHub</a><br/>
+</section>
+{% endfor %}
+{% endblock %}
+

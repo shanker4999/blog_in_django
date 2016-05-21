@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    {% for article in articles %}
+        <div class="headline">
+            <h2>{{article.headline|safe}}</h2>
+        </div>
+            <div class="reporter">
+                <h5>Posted by <strong>{{ article.reporter }}</strong>
+                     on {{article.pub_date|date:"F j, Y"}}</h5>
+        </div>
+    <div class="content">
+        <h4>{{ article.content|safe|truncatewords:"50"|linebreaks}}</h4>
+        <h5><a href="/blog/{{article.id}}/">READ MORE ></a></h5><br/><hr/>
+    </div>
+    {% endfor %}
+{% endblock %}
+{% block sidebar %}
+    <h3>Archives</h3>
+    <hr/>
+    <a href="/blog/article/2017">2017</a>
+    <a href="/blog/article/2016">2016</a>
+{% endblock %}
+

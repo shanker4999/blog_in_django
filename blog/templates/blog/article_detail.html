@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>{{articleData.headline}}</h2>
+    <h5>Posted by <strong>{{ articleData.reporter }}</strong>
+                     on {{articleData.pub_date|date:"F j, Y"}}</h5><br/>
+{% endblock %}
+
+{% block content-page %}
+    {{ articleData.content|safe}}
+    <br/><br/><hr style="margin: 25px;"/>
+{% endblock %}
+
+{% block test %}
+
+    <h1>Your Comments</h1>
+    <form action="/blog/comment/{{articleData.id}}/" method="post" class="CommentForm">
+        {% csrf_token %}
+            {{comment_form.as_p}}
+        {% if user.is_authenticated %}
+            <input type="submit" value="submit">
+        {% else %}
+           <h4><a href ="{% url 'user_login' %}"><strong>Login</strong></a></h4>
+        {% endif %}
+    </form>
+{% endblock %}
+{% block comment %}
+    <h2 style="background-color: lightyellow;width: 20%;padding-left: 20px;">Comments</h2>
+    {% for comments in commentsByUser%}
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <h5>{{ comments.created_date }}</h5>
+                    <h4>{{comments.comment}}</h4>
+
+                </td>
+            </tr>
+        </table>
+    <br/>
+{% endfor %}
+{% endblock %}
+

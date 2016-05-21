@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'blog/normalize.css'%}"/>
+    <link rel="stylesheet" href="{% static 'blog/main.css'%}"/>
+    <meta charset="UTF-8">
+    <title>{% block title %}Linux Blog{% endblock %}</title>
+</head>
+<body>
+    <div id="page-header">
+        {% block header %}
+            <h1>Linux's and Python's Blog</h1>
+            <a href ="{% url 'user_logout' %}">Logout</a>
+
+            {% if user.is_authenticated %}
+               <a href="#"><b>Welcome</b> {{user.username |title}}</a>
+            {% else %}
+            <a href="{% url 'register' %}">SignUp</a>
+            <a href ="{% url 'user_login' %}">Login</a>
+            {% endif %}
+
+
+        {% endblock %}
+    </div>
+    <div id="page-navbar">
+        {% block navbar %}
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+
+                <li><a href="{% url 'contact' %}">Contact</a> </li>
+            <!--/ul-->
+                <div class="search">
+                    <form action="#" method="post">
+                        <input type="search" name="search" value="search">
+                        <input type="submit"value="&#128269">
+                    </form>
+                </div>
+            </ul>
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        {% block sidebar %}{% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    {% block content-page %}{% endblock %}
+    {% block address %}{% endblock %}
+    {% block test %}{% endblock %}
+    {% block comment %} {% endblock %}
+    {% block register %}{% endblock %}
+    {% block user_login %} {% endblock %}
+
+
+<footer>
+    <div id="footer">
+        {% block footer %}
+		    <a href="https://github.com/shanker4999">
+                <img src ="{% static 'blog/images/git.png' %}"></a>
+		    <p>&copy; 2016 shankar.</p>
+        {% endblock %}
+    </div>
+</footer>
+</body>
+</html>

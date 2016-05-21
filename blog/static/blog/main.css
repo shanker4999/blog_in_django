@@ -1,0 +1,189 @@
+/* Head starts here */
+head{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+ }
+
+h1,h2{
+    font-weight: normal;
+    font-family: Palatino, "Palatino Linotype",
+                 "Book Antiqua", "Hoefler Text",
+                  Georgia, "Lucida Bright",
+                   Cambria, Times, "Times New Roman", serif;
+    font-size: 1.3em;
+    color: #20AA76;
+    padding: 5px 15px 5px 25px;
+}
+h3 , h4{
+    font-weight: inherit;
+    font-family: Palatino, "Palatino Linotype",
+                 "Book Antiqua", "Hoefler Text",
+                  Georgia, "Lucida Bright",
+                   Cambria, Times, "Times New Roman", serif;
+    font-size: 1.2em;
+    color: #0C3C26;
+    line-height: 1.7em;
+    padding: 5px 15px 5px 25px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #20AA76;
+}
+a:hover{
+    color:#0C3C26 ;
+
+}
+
+#page-header{
+    color: #ffffff;
+    background-color:#0C3C26;
+    font-family: Palatino, "Palatino Linotype",
+                 "Book Antiqua", "Hoefler Text",
+                  Georgia, "Lucida Bright", Cambria,
+                  Times, "Times New Roman", serif;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 10px;
+    width: 100%;
+}
+#page-header a {
+    float: right;
+    padding: 10px;
+    margin-right: 25px;
+
+}
+/*End of header page ---------------------------------------*/
+#page-navbar ul{
+    background-color: #008060;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+#page-navbar ul li {
+    list-style: none;
+    display: inline-block;
+
+}
+#page-navbar ul li a{
+    color: #ffffff;
+    font-size: 1.3em;
+    padding: 20px 20px 20px 5px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;;
+}
+#page-navbar a:hover{
+    background-color: #0C3C26
+}
+#page-navbar .search{
+    display: inline-block;
+    float:right;
+    padding-right: 10px;
+    margin-right: 5%;
+}
+
+footer{
+	font-size: 0.75em;
+	text-align: center;
+	clear: both;  /* do not float left and right*/
+	padding: 50px;
+	color: #ccc;
+}
+footer img{
+    height: 20px;
+
+}
+/* base.html ends --------------*/
+
+#content{
+    padding: 0 5px 5px 5px;
+    width: 60%;
+}
+/*
+#content h2{
+    color: #20AA76;
+    line-height: 1em;
+    padding: 20px 0 0 20px
+}
+
+#content h4{
+    color: #000000;
+    line-height: 0.75em;
+    padding: 0 0 0 20px;
+
+    }
+ */
+#content h5{
+    color: #859D94;;
+    line-height: 0.75em;
+    padding: 5px 15px 5px 25px;
+    margin: 0;
+
+}
+
+#content p{
+    margin: 0 0;
+    line-height: 1.6em;
+    font-family: Palatino, "Palatino Linotype",
+                 "Book Antiqua", "Hoefler Text",
+                  Georgia, "Lucida Bright",
+                   Cambria, Times, "Times New Roman", serif;
+    font-size: 1.3em;
+    color: #0C3C26;
+}
+
+#content a:hover{
+    color: #000080;
+}
+
+#sidebar{
+
+    width:20%;
+    float:right;
+    padding:10px;
+    margin-left: 20px;
+}
+#sidebar a{
+    display: block;
+    font-size: 1.2em;
+    padding: 10px;
+}
+#sidebar hr{
+    margin-right: 15px;
+    color: #c0c0c0;
+}
+/*---------Contact starts below--------------*/
+.image {
+    padding-left: 30%;
+    padding-right: 30%;
+
+
+}
+.image img{
+    padding: 10px 30% 10px 30%;
+    border-radius: 100%;
+}
+#right{
+    float: right;
+    margin-right: 15%;
+    display: inline;
+    color: #0C3C26;
+}
+#left{
+    float: left;
+    margin-left: 20px;
+    display: inline;
+    color: #0C3C26;
+}
+/*article detail page begins */
+#content-page {
+    width: 90%;
+
+}
